@@ -1,0 +1,53 @@
+{% extends 'kebanda/index.html' %}
+{% load static %}
+{% block title %}MyShop- Kebanda{% endblock %}
+
+{% block content %}
+
+    <div>
+        <div>
+            <div>
+                {% if user_shop %}
+                    <div style="background-image: url('{{ user_shop.profile_image.url }}'); background-size: contain; margin: 5%; border-radius: 5px;">
+                        <div style="background-color: rgba(0, 0, 0, 0.637);">
+                            <h1><p style="color: orange;">{{ user_shop.name }}</p></h1>
+                            <img src="{{ user_shop.profile_image.url }}" alt="shop profile photo" class="img-fluid" style="max-width: 200px; height: 200px; float:initial;">
+                        </div>
+                        <div style="background-color: orange;">
+                            <small><strong>{{user_shop.location}}</strong></small>
+                            <h2 style="color: white; padding: 20px;">{{ user_shop.description }}</h2>
+                        </div>
+                        <div class="topnav" style="background-color: green;">
+                            <a href="{% url 'kebanda:add_item' %}">Add Item</a>
+                            <a href="#">update Shop Profile</a>
+                            <a href="{% url 'kebanda:myduka' %}">MyDuka Inventory & Stock Manager </a>
+                            <a href="#"></a>
+                            <a href="#" style="float: right;">Close Shop</a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 5%;">
+                    {% for item in user_items %}
+                    
+                        <div class="col-sm container">
+                            <div>
+                                <img src="{{ item.image.url }}" alt="Item Image" class="img-fluid" style="max-width: 200px; height: 200px;"> 
+                                <p style="color: orange;">{{ item.name }} <a href="{% url 'kebanda:edit_item' item.id %}">update</a></p>
+                                <p style="overflow: hidden;"> - {{ item.description }}</p> 
+                                <p style="background-color: orange;"><label><small>Ksh</small> {{ item.price }}</label></p>
+                                <p><strong> in stock : {{ item.stock_quantity }}</strong></p>
+                            </div>
+                        
+                        </div>
+                    {% endfor %}
+                    </div>
+
+                {% else %}
+                    <p>You don't have a shop yet. <a href="{% url 'create_shop' %}">Create a Shop</a></p>
+                {% endif %}
+            </div>
+        </div>            
+    </div>
+    
+    
+    
+{% endblock %}

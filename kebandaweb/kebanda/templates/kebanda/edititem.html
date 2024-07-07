@@ -1,0 +1,14 @@
+{% extends 'kebanda/index.html' %}
+{% block title %}edit-item{% endblock %}
+
+{% block content %}
+  <h1>Edit Item: {{ item.name }}</h1>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form}}
+    <button type="submit">Save changes</button>
+  </form>
+  
+  <a href="{% url 'kebanda:myshop' %}">Back to MyShop</a>  <!-- Update with your actual dashboard URL -->
+{% endblock %}

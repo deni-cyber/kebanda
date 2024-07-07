@@ -1,0 +1,55 @@
+To achieve the layout you described, you can use CSS to style the form and header elements. Here's an example of how you can modify your code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: black;
+    }
+
+    form {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding: 10px; /* Add padding for better visual appearance */
+    }
+
+    input {
+      width: 80%;
+      padding: 8px;
+    }
+
+    button {
+      width: 20%;
+      padding: 8px;
+      margin-left: 5px; /* Add margin for spacing between input and button */
+    }
+
+    h1 {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <form>
+      <input type="search" placeholder="Search" aria-label="Search">
+      <button type="submit">Search</button>
+    </form>
+    <h1>Welcome to Kebanda</h1>
+  </div>
+
+</body>
+</html>

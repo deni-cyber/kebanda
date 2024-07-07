@@ -1,0 +1,25 @@
+{% extends 'kebanda/index.html' %}
+{% load static %}
+{% block title %}Vendor-registration{% endblock %}
+{% block content %}
+
+<h1 style="color: orange;">Register as a Vendor</h1>
+<!-- vendor_registration.html -->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h3 style="color: orange;">Enter your vendors info
+        ...</h3>
+    <!-- Vendor Registration Form Fields -->
+    {{ vendor_form.as_p }}
+
+    <h3 style="color: orange;">Fill in your Shops details here...</h3>
+    <!-- Shop Creation Form Fields -->
+    {{ shop_form.as_p }}
+    <h3 style="color: orange;">confim it is you...</h3>
+    <!-- Authentication Form Fields -->
+    {{ auth_form.as_p }}
+
+    <button type="submit">Register as Vendor</button>
+</form>
+
+{% endblock %}

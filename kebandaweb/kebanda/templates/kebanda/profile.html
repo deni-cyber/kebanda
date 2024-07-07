@@ -1,0 +1,32 @@
+{% extends 'kebanda/index.html' %}
+{% load static %}
+{% block title %}profile - Kebanda{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        
+        <div >
+            <h1 >My Profile</h1>
+            <div style="background-color: white; margin: 5%; border-radius: 5px;">
+                
+                {% if person %}
+                    <!-- Display profile-specific information -->
+                    <p><img src="{{ person.profile_image.url }}" alt="Profile Image" class="img-fluid" style="max-width: 300px; height: auto;"></p>
+                    <!-- Add more profile-specific information as needed -->
+                    <div>
+                        <h2>User Information</h2>
+                        <small><a href="#">update user info</a></small>
+                        <h3><strong>Username:</strong> {{ user.username }}</h3>
+                        <h4><strong>Email:</strong> {{ user.email }}</h4>                
+                    </div>
+                {% else %}
+                    <p class="card-text">No profile information found for this user.</p>
+                {% endif %}
+            </div>
+        </div>            
+    </div>
+    
+    
+    
+{% endblock %}

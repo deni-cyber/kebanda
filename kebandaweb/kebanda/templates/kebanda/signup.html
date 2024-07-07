@@ -1,0 +1,14 @@
+
+{% extends 'kebanda/index.html' %}
+{% block title %}signup - Kebanda{% endblock %}
+
+
+{% block content %}
+    <h1 style="color: orange;">Signup</h1>
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+            {{signupform}}
+        <input type="submit" name="signup">
+        
+    </form>
+{% endblock %}

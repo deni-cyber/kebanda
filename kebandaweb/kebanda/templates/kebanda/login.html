@@ -1,0 +1,14 @@
+
+{% extends 'kebanda/index.html' %}
+{% block title %}login - Kebanda{% endblock %}
+
+
+{% block content %}
+    <h1 style="color: orange;">Login</h1>
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+            {{loginform}}
+        <input type="submit" name="login">
+        
+    </form>
+{% endblock %}

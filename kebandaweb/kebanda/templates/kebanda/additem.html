@@ -1,0 +1,13 @@
+{% extends 'kebanda/index.html' %}
+{% block title %}login - Kebanda{% endblock %}
+
+
+{% block content %}
+    <h2 style="color: orange;">Add New Item</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Add Item</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,114 @@
+body {
+    background-color: black;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+h1{
+    color: orange;
+    text-align: center;
+    
+}
+
+p{
+    color: white;
+    text-align: center;
+    padding: 2%;
+    font-size: larger;
+    background-color: rgba(0, 0, 0, 0.76);
+    border-radius: 5px;
+}
+
+
+button{
+    background-color: green;
+    color: white;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    width: 30%;
+    align-content: center;
+}
+
+button:hover{
+    background-color: black;
+}
+
+
+
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    height: 20%;
+    overflow: hidden;
+    border-bottom: solid, white, 2px;
+    background-color: orange;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.home_box{
+    background: white url("images/bg.jpg") no-repeat;
+    padding: 5%;
+    background-size: contain;
+    height: 300px;
+}
+.home_box div{
+    float: left;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: green;
+    color: white;
+}
+
+.searchform{
+    background-color: black;
+}
+
+.searchform div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+  }
+
+.searchform form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px; /* Add padding for better visual appearance */
+  }
+
+.searchform input {
+    width: 80%;
+    padding: 8px;
+  }
+
+.searchform button {
+    width: 20%;
+    padding: 8px;
+    margin-left: 5px; /* Add margin for spacing between input and button */
+  }
+
